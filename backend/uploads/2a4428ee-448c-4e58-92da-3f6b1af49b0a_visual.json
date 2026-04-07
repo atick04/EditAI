@@ -1,0 +1,50 @@
+[
+  {
+    "time_sec": 0.0,
+    "scene": "Speaker neutral, looking at camera"
+  },
+  {
+    "time_sec": 4.0,
+    "scene": "Speaker gesturing with hand"
+  },
+  {
+    "time_sec": 8.0,
+    "scene": "Speaker looking down, speaking"
+  },
+  {
+    "time_sec": 12.0,
+    "scene": "Speaker looking forward, speaking"
+  },
+  {
+    "time_sec": 16.0,
+    "scene": "Speaker pointing finger, speaking"
+  },
+  {
+    "time_sec": 20.0,
+    "scene": "Speaker speaking, neutral expression"
+  },
+  {
+    "time_sec": 24.0,
+    "scene": "Speaker speaking, neutral expression"
+  },
+  {
+    "time_sec": 28.0,
+    "scene": "Hand touching head, speaker looking"
+  },
+  {
+    "time_sec": 32.0,
+    "scene": "Speaker making okay gesture"
+  },
+  {
+    "time_sec": 36.0,
+    "scene": "Speaker turning head, looking side"
+  },
+  {
+    "time_sec": 40.0,
+    "scene": "Speaker looking up, surprised"
+  },
+  {
+    "time_sec": 44.0,
+    "scene": "Speaker looking at camera, neutral"
+  }
+]

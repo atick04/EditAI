@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+sqlalchemy
+psycopg2-binary
+asyncpg
+alembic
+celery
+redis
+python-multipart
+python-dotenv
+ffmpeg-python
+openai
+elevenlabs
+google-generativeai

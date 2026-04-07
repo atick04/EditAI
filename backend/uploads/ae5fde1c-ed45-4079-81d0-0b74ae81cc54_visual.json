@@ -1,0 +1,50 @@
+[
+  {
+    "time_sec": 0.0,
+    "scene": "Speaker neutral, looking at camera"
+  },
+  {
+    "time_sec": 10.0,
+    "scene": "Speaker speaking, mouth moving"
+  },
+  {
+    "time_sec": 20.0,
+    "scene": "Speaker neutral, looking at camera"
+  },
+  {
+    "time_sec": 30.0,
+    "scene": "Speaker slight head turn"
+  },
+  {
+    "time_sec": 40.0,
+    "scene": "Speaker neutral, looking at camera"
+  },
+  {
+    "time_sec": 50.0,
+    "scene": "Speaker speaking, mouth moving"
+  },
+  {
+    "time_sec": 60.0,
+    "scene": "Speaker neutral, looking at camera"
+  },
+  {
+    "time_sec": 70.0,
+    "scene": "Speaker slight head turn"
+  },
+  {
+    "time_sec": 80.0,
+    "scene": "Speaker speaking, mouth moving"
+  },
+  {
+    "time_sec": 90.0,
+    "scene": "Speaker neutral, looking at camera"
+  },
+  {
+    "time_sec": 100.0,
+    "scene": "Speaker slight head turn"
+  },
+  {
+    "time_sec": 110.0,
+    "scene": "Speaker neutral, looking at camera"
+  }
+]
