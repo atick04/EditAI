@@ -1,7 +1,7 @@
-Montage AI – Real‑Time AI Video Editing Engine
+#Edit AI – Real‑Time AI Video Editing Engine
 
-Project Overview
-Montage AI is a fully autonomous AI‑agent that can add graphics, subtitles, B‑Roll, and any visual effect to a video in real time without re‑encoding the whole clip.
+#Project Overview
+MontagEdit AI is a fully autonomous AI‑agent that can add graphics, subtitles, B‑Roll, and any visual effect to a video in real time without re‑encoding the whole clip.
 
 Key features
 
