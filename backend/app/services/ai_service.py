@@ -2,7 +2,7 @@ import os
 from openai import AsyncOpenAI
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(override=True)
 
 groq_api_key = os.getenv("GROQ_API_KEY")
 # Используем OpenAI SDK, но направляем запросы на сверхбыстрые серверы Groq

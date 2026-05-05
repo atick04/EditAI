@@ -1,0 +1,25 @@
+{
+  "id": "hormozi",
+  "name": "Агрессивный Поп (Hormozi)",
+  "description": "Цветные субтитры (Желтый/Зеленый/Красный), агрессивный зум, удержание внимания.",
+  "preview_url": "https://images.unsplash.com/photo-1557683311-eac922347aa1?q=80&w=600&auto=format&fit=crop",
+  "subtitles": {
+    "font": "ProximaNova-Bold",
+    "fontSize": 140,
+    "position": "center",
+    "colorMap": ["Yellow", "White", "Green", "Red"],
+    "animation": "pop",
+    "useOutline": true,
+    "wordsPerScreen": 1
+  },
+  "editing": {
+    "autoCutSilences": true,
+    "zoomFrequency": "high",
+    "brollFrequency": "low",
+    "speedRamp": true
+  },
+  "graphics": {
+    "theme": "vibrant",
+    "useSoundEffects": true
+  }
+}

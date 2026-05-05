@@ -1,0 +1,44 @@
+{
+  "templates": [
+    {
+      "id": "premium_target",
+      "name": "Target Goal Visual",
+      "description": "Элитный дизайн с абстрактным фоном (диагональные линии) и SVG мишенью со стрелой. Идеально для целей, задач и попаданий 'в яблочко'.",
+      "use_when": "Спикер говорит про цели, стратегии, попадание в 'боль', метрику успеха",
+      "html_template": "<div id='{id}' class='clip' data-start='{start}' data-duration='{duration}' data-track-index='{track}' style='position:absolute;left:0;top:0;width:1080px;height:1920px;opacity:0;overflow:hidden;background:linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(0,0,0,0.8));'><div style='position:absolute;top:0;left:0;width:200%;height:200%;background-image:linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.05) 75%, transparent 75%, transparent);background-size:100px 100px;opacity:0.3;transform:rotate(-15deg);'></div><div style='position:absolute;right:100px;top:400px;width:400px;height:400px;'><svg viewBox='0 0 100 100' style='width:100%;height:100%;drop-shadow: 0px 20px 30px rgba(0,0,0,0.5);'><circle cx='50' cy='50' r='45' fill='none' stroke='#fff' stroke-width='10' opacity='0.8'/><circle cx='50' cy='50' r='30' fill='none' stroke='#06b6d4' stroke-width='10'/><circle cx='50' cy='50' r='15' fill='#8b5cf6'/><path d='M 10 90 L 45 55' stroke='#fff' stroke-width='4' stroke-linecap='round'/><path d='M 5 95 L 20 80' stroke='#fff' stroke-width='6'/></svg></div><div style='position:absolute;left:100px;top:500px;width:600px;'><h1 style='font-family:Inter,sans-serif;font-size:110px;font-weight:900;color:#fff;line-height:1.1;text-transform:uppercase;'>{title}</h1><p style='font-family:Inter,sans-serif;font-size:40px;color:rgba(255,255,255,0.7);margin-top:20px;'>{text}</p></div></div>",
+      "animation": "tl.to('#{id}',{opacity:1,duration:0.8,ease:'power2.out'},{start});tl.fromTo('#{id} svg',{scale:0,rotation:-45},{scale:1,rotation:0,duration:1.2,ease:'elastic.out(1, 0.5)'},{start});tl.to('#{id}',{opacity:0,duration:0.6,ease:'power2.in'},{end_fade});"
+    },
+    {
+      "id": "neon_orb",
+      "name": "Neon Aura Mind",
+      "description": "Темный премиум дизайн с огромной пульсирующей неоновой сферой (blur) на фоне текста. Как на референсах.",
+      "use_when": "Спикер говорит абстрактную важную мысль, идею, психологию или инсайт.",
+      "html_template": "<div id='{id}' class='clip' data-start='{start}' data-duration='{duration}' data-track-index='{track}' style='position:absolute;left:0;top:0;width:1080px;height:1920px;opacity:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);backdrop-filter:blur(10px);'><div id='{id}-orb' style='position:absolute;width:600px;height:600px;border-radius:50%;background:linear-gradient(45deg, #06b6d4, #8b5cf6);filter:blur(100px);opacity:0.6;z-index:-1;'></div><div style='text-align:center;max-width:800px;'><h2 style='font-family:Inter,sans-serif;font-size:120px;font-weight:900;color:#fff;margin:0;letter-spacing:-2px;'>{title}</h2><p style='font-family:Inter,sans-serif;font-size:45px;color:rgba(255,255,255,0.8);font-weight:300;margin-top:30px;'>{text}</p></div></div>",
+      "animation": "tl.to('#{id}',{opacity:1,duration:1,ease:'power2.out'},{start});tl.to('#{id}-orb',{scale:1.2,rotation:180,duration:4,repeat:-1,yoyo:true,ease:'sine.inOut'},{start});tl.to('#{id}',{opacity:0,duration:0.8,ease:'power2.in'},{end_fade});"
+    },
+    {
+      "id": "tech_grid",
+      "name": "Cyber Tech Grid",
+      "description": "Сетка в перспективе с неоновыми узлами и технологичным окном.",
+      "use_when": "Речь про технологии, алгоритмы, ИИ, структуру",
+      "html_template": "<div id='{id}' class='clip' data-start='{start}' data-duration='{duration}' data-track-index='{track}' style='position:absolute;left:0;top:0;width:1080px;height:1920px;opacity:0;background:rgba(0,0,0,0.8);overflow:hidden;'><div style='position:absolute;bottom:-200px;left:-200px;width:1480px;height:1000px;background-image:linear-gradient(rgba(6,182,212,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(6,182,212,0.3) 1px, transparent 1px);background-size:50px 50px;transform:rotateX(60deg) perspective(500px);mask-image:linear-gradient(to top, black, transparent);-webkit-mask-image:linear-gradient(to top, black, transparent);'></div><div id='{id}-card' style='position:absolute;top:400px;left:90px;width:900px;padding:60px;background:rgba(10,10,10,0.8);border:1px solid #06b6d4;border-radius:20px;box-shadow:0 0 50px rgba(6,182,212,0.2);backdrop-filter:blur(20px);'><div style='display:flex;gap:15px;margin-bottom:30px;'><div style='width:20px;height:20px;border-radius:50%;background:#ef4444;'></div><div style='width:20px;height:20px;border-radius:50%;background:#eab308;'></div><div style='width:20px;height:20px;border-radius:50%;background:#10b981;'></div></div><div style='font-family:monospace;font-size:50px;color:#06b6d4;'>{text}</div></div></div>",
+      "animation": "tl.to('#{id}',{opacity:1,duration:0.8,ease:'power2.out'},{start});tl.fromTo('#{id}-card',{y:100,rotationX:15},{y:0,rotationX:0,duration:1.2,ease:'back.out(1.2)'},{start});tl.to('#{id}',{opacity:0,duration:0.6,ease:'power2.in'},{end_fade});"
+    },
+    {
+      "id": "glassmorphism_keyword",
+      "name": "Glassmorphism Keyword Card",
+      "description": "Полупрозрачная стеклянная плашка с SVG-иконкой и крупным текстом. Появляется снизу с blur-эффектом.",
+      "use_when": "Спикер произносит ключевое слово, термин или название",
+      "html_template": "<div id='{id}' class='clip' data-start='{start}' data-duration='{duration}' data-track-index='{track}' style='position:absolute;left:80px;bottom:250px;width:920px;padding:50px 60px;background:rgba(255,255,255,0.08);backdrop-filter:blur(24px);border:1.5px solid rgba(255,255,255,0.18);border-radius:32px;opacity:0;display:flex;align-items:center;gap:30px;'><svg width='70' height='70' viewBox='0 0 24 24' fill='none' stroke='#06b6d4' stroke-width='2' stroke-linecap='round'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'></polygon></svg><span style='font-family:Inter,sans-serif;font-size:72px;font-weight:800;color:#fff;text-shadow:0 0 30px rgba(6,182,212,0.4);'>{text}</span></div>",
+      "animation": "tl.to('#{id}',{opacity:1,y:-50,duration:0.7,ease:'power3.out'},{start});tl.to('#{id}',{opacity:0,y:-80,duration:0.5,ease:'power2.in'},{end_fade});"
+    },
+    {
+      "id": "checklist_item",
+      "name": "Checklist Item",
+      "description": "Анимированный пункт списка с галочкой. Появляется слева. Используй несколько подряд с разными data-start для списков.",
+      "use_when": "Спикер перечисляет шаги, пункты, советы",
+      "html_template": "<div id='{id}' class='clip' data-start='{start}' data-duration='{duration}' data-track-index='{track}' style='position:absolute;left:80px;bottom:{bottom}px;width:920px;padding:35px 50px;background:rgba(0,0,0,0.6);backdrop-filter:blur(16px);border-left:5px solid #10b981;border-radius:20px;opacity:0;display:flex;align-items:center;gap:25px;'><svg width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='#10b981' stroke-width='3' stroke-linecap='round'><polyline points='20 6 9 17 4 12'></polyline></svg><span style='font-family:Inter,sans-serif;font-size:52px;font-weight:600;color:#fff;'>{text}</span></div>",
+      "animation": "tl.to('#{id}',{opacity:1,x:30,duration:0.5,ease:'power3.out'},{start});tl.to('#{id}',{opacity:0,duration:0.4,ease:'power2.in'},{end_fade});"
+    }
+  ]
+}

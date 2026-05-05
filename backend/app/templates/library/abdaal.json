@@ -1,0 +1,25 @@
+{
+  "id": "abdaal",
+  "name": "Продуктивность (Ali Abdaal)",
+  "description": "Элегантный минимализм. Чистые шрифты, мягкие тени, сноски-инфографики и мягкие зумы.",
+  "preview_url": "https://images.unsplash.com/photo-1542382257-80ddcbbf9f82?q=80&w=600&auto=format&fit=crop",
+  "subtitles": {
+    "font": "Inter",
+    "fontSize": 90,
+    "position": "bottom",
+    "colorMap": ["White", "Yellow", "Cyan"],
+    "animation": "slide_up",
+    "useOutline": false,
+    "wordsPerScreen": 4
+  },
+  "editing": {
+    "autoCutSilences": true,
+    "zoomFrequency": "medium",
+    "brollFrequency": "medium",
+    "speedRamp": false
+  },
+  "graphics": {
+    "theme": "blueprint",
+    "useSoundEffects": true
+  }
+}

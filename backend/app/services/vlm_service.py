@@ -81,10 +81,10 @@ async def analyze_video_scenes(video_path: str, fps: float = 0.5) -> list[dict]:
                 "type": "text",
                 "text": (
                     f"You are analyzing {len(sampled)} keyframes from a video, sampled every {int(1/fps)} seconds. "
-                    "For each frame (in order), write a SHORT description (max 8 words) of what you see: "
-                    "speaker emotion, action, camera angle, notable objects. "
+                    "For each frame (in order), write a SHORT description (max 8 words) of what you see "
+                    "and specify the 'safe_zone' (\"top\", \"bottom\", \"left\", \"right\", \"none\") where motion graphics can be placed without covering faces. "
                     "Return ONLY a valid JSON array, no markdown, no explanation:\n"
-                    '[{"frame": 0, "scene": "Speaker smiling, pointing at phone"}, ...]\n\n'
+                    '[{"frame": 0, "scene": "Speaker smiling...", "safe_zone": "left"}, ...]\n\n'
                     "Frames follow in order:"
                 )
             }
@@ -126,7 +126,8 @@ async def analyze_video_scenes(video_path: str, fps: float = 0.5) -> list[dict]:
                 time_sec = frame_times[idx] if idx < len(frame_times) else round(idx / fps, 1)
                 result.append({
                     "time_sec": time_sec,
-                    "scene": item.get("scene", "")
+                    "scene": item.get("scene", ""),
+                    "safe_zone": item.get("safe_zone", "none")
                 })
 
             print(f"[VLM] ✅ Qwen3-VL analyzed {len(result)} scenes.")
@@ -144,5 +145,5 @@ def format_visual_context(scenes: list[dict]) -> str:
     """Converts scene list into a compact string for LLM prompt injection."""
     if not scenes:
         return "Визуальный анализ недоступен."
-    lines = [f"[{s['time_sec']:.1f}s] {s['scene']}" for s in scenes]
+    lines = [f"[{s['time_sec']:.1f}s] {s['scene']} (Безопасная зона: {s.get('safe_zone', 'none')})" for s in scenes]
     return "\n".join(lines)

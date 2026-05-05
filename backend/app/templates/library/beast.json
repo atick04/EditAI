@@ -1,0 +1,25 @@
+{
+  "id": "beast",
+  "name": "Экстремальная Динамика (Beast)",
+  "description": "Максимум удержания внимания! Агрессивный зум, тряска камеры, всплывающие субтитры и звуковые эффекты на каждое действие.",
+  "preview_url": "https://images.unsplash.com/photo-1563298723-dcfebaa392e3?q=80&w=600&auto=format&fit=crop",
+  "subtitles": {
+    "font": "Komika",
+    "fontSize": 150,
+    "position": "center",
+    "colorMap": ["Yellow", "Cyan", "Red", "White"],
+    "animation": "bounce",
+    "useOutline": true,
+    "wordsPerScreen": 2
+  },
+  "editing": {
+    "autoCutSilences": true,
+    "zoomFrequency": "high",
+    "brollFrequency": "high",
+    "speedRamp": true
+  },
+  "graphics": {
+    "theme": "vibrant",
+    "useSoundEffects": true
+  }
+}

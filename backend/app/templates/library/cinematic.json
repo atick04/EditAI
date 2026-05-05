@@ -1,0 +1,25 @@
+{
+  "id": "cinematic",
+  "name": "Документалка (Cinematic)",
+  "description": "Плавные медленные наплывы камеры. Мягкие переходы. Элегантный текст с засечками и глубокий саунд-дизайн.",
+  "preview_url": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=600&auto=format&fit=crop",
+  "subtitles": {
+    "font": "PlayfairDisplay-Regular",
+    "fontSize": 70,
+    "position": "bottom",
+    "colorMap": ["White"],
+    "animation": "fade",
+    "useOutline": false,
+    "wordsPerScreen": 5
+  },
+  "editing": {
+    "autoCutSilences": false,
+    "zoomFrequency": "low",
+    "brollFrequency": "medium",
+    "speedRamp": false
+  },
+  "graphics": {
+    "theme": "cinematic",
+    "useSoundEffects": false
+  }
+}

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api import video, chat
+from app.api import video, chat, templates
 
 app = FastAPI(
     title="Montage AI API",
@@ -21,7 +21,7 @@ from fastapi.staticfiles import StaticFiles
 
 app.include_router(video.router)
 app.include_router(chat.router)
-
+app.include_router(templates.router)
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 @app.get("/")

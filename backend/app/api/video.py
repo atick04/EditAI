@@ -76,16 +76,27 @@ async def upload_video(background_tasks: BackgroundTasks, file: UploadFile = Fil
 async def get_video_status(file_id: str):
     rendered_path = os.path.join(UPLOAD_DIR, f"{file_id}_rendered.mp4")
     log_path = os.path.join(UPLOAD_DIR, f"{file_id}.log")
+    render_lock_path = os.path.join(UPLOAD_DIR, f"{file_id}.rendering")
     
     logs = []
     if os.path.exists(log_path):
         with open(log_path, "r", encoding="utf-8") as f:
             logs = f.read().strip().split("\n")
-            
-    is_ready = os.path.exists(rendered_path)
-    updated_at = os.stat(rendered_path).st_mtime if is_ready else 0
+    
+    # If a render lock file exists, render is actively in progress
+    is_rendering = os.path.exists(render_lock_path)
+    is_ready = os.path.exists(rendered_path) and not is_rendering
+    updated_at = os.stat(rendered_path).st_mtime if os.path.exists(rendered_path) else 0
+    
+    if is_rendering:
+        status = "processing"
+    elif is_ready:
+        status = "ready"
+    else:
+        status = "editing"
+
     return {
-        "status": "ready" if is_ready else "editing", 
+        "status": status,
         "filename": f"{file_id}_rendered.mp4" if is_ready else None,
         "updated_at": updated_at,
         "logs": [l for l in logs if l]
